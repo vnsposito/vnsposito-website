@@ -234,3 +234,23 @@ h2{font-size:clamp(28px,3vw,40px);line-height:1.2;letter-spacing:-.035em;margin:
 .usage-chart li { display: grid; grid-template-columns: 4.5rem 1fr 1.75rem; align-items: center; gap: 8px; font-size: .82rem; }
 .usage-track { background: #e9f2f9; border-radius: 4px; }
 .usage-track i { display: block; width: var(--bar-width); height: 8px; border-radius: 4px; background: #0872d4; }
+
+.about-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 250px); align-items: center; gap: 40px; }
+.about-photo { display: block; width: 100%; height: auto; border-radius: 16px; }
+.about-chapter { padding: 36px 0; }
+.about-chapter + .about-chapter { border-top: 1px solid #dce8f2; }
+.about-chapter h2 { margin: 0 0 14px; }
+.about-chapter p { max-width: 72ch; margin: 0; line-height: 1.75; }
+.about-link { display: inline-block; margin-top: 16px; color: #0864a3; font-weight: 700; text-decoration: underline; }
+@media (max-width: 700px) {
+  .about-layout { grid-template-columns: 1fr; gap: 20px; }
+  .about-photo { max-width: 200px; }
+}
+
+.about-timeline { display: grid; gap: 24px; }
+.about-milestone { display: grid; grid-template-columns: 5rem minmax(0, 1fr); gap: 20px; }
+.about-milestone time { color: #0864a3; font-weight: 700; padding-top: .4rem; }
+.about-milestone > div { border-left: 2px solid #bdd5e9; padding-left: 22px; }
+@media (max-width: 560px) {
+  .about-milestone { grid-template-columns: 1fr; gap: 6px; }
+}
